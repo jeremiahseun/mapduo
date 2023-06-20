@@ -15,6 +15,7 @@ dependencies:
   intl: ^0.18.0
   location: ^4.4.0
   mapbox_gl: ^0.16.0
+  permission_handler: ^10.3.0
   provider: ^6.0.5
 
 dev_dependencies:
@@ -28,3 +29,4 @@ flutter:
   generate: true
   assets:
     - assets/config/
+    - assets/style.json
