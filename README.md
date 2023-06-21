@@ -35,6 +35,9 @@ _\*Mapduo works on iOS, Android, Web, and Windows._
 
 ---
 
+## Screen Record
+![Screen Record](assets/Test Mapbox Drive.gif)
+
 ## Running Tests 🧪
 
 To run all unit and widget tests use the following command:
