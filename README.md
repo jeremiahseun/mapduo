@@ -37,7 +37,7 @@ _\*Mapduo works on iOS, Android, Web, and Windows._
 
 ## Screen Record
 <br>
-[Screen Record](lib/assets/Test Mapbox Drive.gif)
+[Screen Record](https://github.com/jeremiahseun/mapduo/blob/main/assets/Test%20Mapbox%20Drive.gif)
 
 ## Running Tests 🧪
 
