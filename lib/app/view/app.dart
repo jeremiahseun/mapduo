@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mapduo/app/view/home/home.dart';
+import 'package:mapduo/app/view/simple_navigation.dart';
 import 'package:mapduo/l10n/l10n.dart';
 
 class App extends StatelessWidget {
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const HomePage(),
+      home: const SampleNavigationApp(),
     );
   }
 }
