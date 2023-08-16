@@ -54,8 +54,8 @@ class _SampleNavigationAppState extends State<SampleNavigationApp> {
 
   final _home = WayPoint(
     name: 'Home',
-    latitude: 4.7988718,
-    longitude: 7.0349139,
+    latitude: 4.8237162, // 4.7988718,
+    longitude: 6.991901, // 7.0349139,
     isSilent: false,
   );
 
@@ -82,8 +82,6 @@ class _SampleNavigationAppState extends State<SampleNavigationApp> {
 
     _navigationOption = MapBoxNavigation.instance.getDefaultOptions();
     _navigationOption.simulateRoute = true;
-    //_navigationOption.initialLatitude = 36.1175275;
-    //_navigationOption.initialLongitude = -115.1839524;
     await MapBoxNavigation.instance
         .registerRouteEventListener(_onEmbeddedRouteEvent);
     MapBoxNavigation.instance.setDefaultOptions(_navigationOption);
@@ -119,7 +117,7 @@ class _SampleNavigationAppState extends State<SampleNavigationApp> {
                 ),
               ),
               Positioned(
-                top: 40,
+                top: 140,
                 left: 0,
                 right: 0,
                 child: Row(
@@ -133,8 +131,10 @@ class _SampleNavigationAppState extends State<SampleNavigationApp> {
                                 _controller?.clearRoute();
                               } else {
                                 final wayPoints = <WayPoint>[];
-                                wayPoints.add(_work);
-                                wayPoints.add(_home);
+                                wayPoints
+                                  ..add(_work)
+                                  ..add(_home);
+
                                 _controller?.buildRoute(
                                   wayPoints: wayPoints,
                                   options: _navigationOption,
@@ -168,7 +168,7 @@ class _SampleNavigationAppState extends State<SampleNavigationApp> {
     );
   }
 
-  Future<void> _onEmbeddedRouteEvent(e) async {
+  Future<void> _onEmbeddedRouteEvent(RouteEvent e) async {
     _distanceRemaining = await MapBoxNavigation.instance.getDistanceRemaining();
     _durationRemaining = await MapBoxNavigation.instance.getDurationRemaining();
 
